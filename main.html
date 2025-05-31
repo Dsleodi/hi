@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giveaway Pro - Ultimate Discord Giveaway Bot</title>
+    <meta name="description" content="Professional Discord Giveaway Bot with advanced features for your community">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="images/logo.png" alt="Giveaway Pro Logo">
+                    <span>Giveaway Pro</span>
+                </div>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#features"><i class="fas fa-star"></i> Features</a></li>
+                    <li><a href="#commands"><i class="fas fa-terminal"></i> Commands</a></li>
+                    <li><a href="#premium"><i class="fas fa-crown"></i> Premium</a></li>
+                    <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    <li><a href="#testimonials"><i class="fas fa-comment-alt"></i> Reviews</a></li>
+                    <li><a href="#" class="login-btn" id="dashboardBtn"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="particles" id="particles-js"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Revolutionize Your Giveaways</h1>
+                <p class="hero-subtitle">The most advanced Discord giveaway bot with powerful features, analytics, and customization</p>
+                <div class="hero-buttons">
+                    <a href="https://discord.com/oauth2/authorize?client_id=YOUR_BOT_ID&permissions=8&scope=bot" class="btn btn-primary">
+                        <i class="fas fa-robot"></i> Invite to Server
+                    </a>
+                    <a href="#features" class="btn btn-secondary">
+                        <i class="fas fa-play-circle"></i> Watch Demo
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" id="hero-server-count">0</div>
+                        <div class="stat-label">Servers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="hero-giveaway-count">0</div>
+                        <div class="stat-label">Giveaways</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="hero-winner-count">0</div>
+                        <div class="stat-label">Winners</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-bot.png" alt="Giveaway Bot Interface" class="floating">
+            </div>
+        </div>
+        <div class="scroll-down">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients">
+        <div class="container">
+            <h3>Trusted by top communities</h3>
+            <div class="client-logos">
+                <img src="images/clients/client1.png" alt="Client 1">
+                <img src="images/clients/client2.png" alt="Client 2">
+                <img src="images/clients/client3.png" alt="Client 3">
+                <img src="images/clients/client4.png" alt="Client 4">
+                <img src="images/clients/client5.png" alt="Client 5">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Powerful Features</h2>
+                <p class="section-subtitle">Everything you need to run successful giveaways</p>
+            </div>
+            <div class="features-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="creation">Creation</button>
+                    <button class="tab-btn" data-tab="management">Management</button>
+                    <button class="tab-btn" data-tab="security">Security</button>
+                    <button class="tab-btn" data-tab="analytics">Analytics</button>
+                </div>
+                <div class="tab-content active" id="creation">
+                    <div class="feature-grid">
+                        <!-- Feature items will be loaded via JavaScript -->
+                    </div>
+                </div>
+                <div class="tab-content" id="management">
+                    <div class="feature-grid">
+                        <!-- Feature items will be loaded via JavaScript -->
+                    </div>
+                </div>
+                <div class="tab-content" id="security">
+                    <div class="feature-grid">
+                        <!-- Feature items will be loaded via JavaScript -->
+                    </div>
+                </div>
+                <div class="tab-content" id="analytics">
+                    <div class="feature-grid">
+                        <!-- Feature items will be loaded via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Video Section -->
+    <section class="demo">
+        <div class="container">
+            <div class="demo-content">
+                <div class="demo-text">
+                    <h2>See It In Action</h2>
+                    <p>Watch our 2-minute demo to see how easy it is to create and manage giveaways with our bot.</p>
+                    <ul class="demo-features">
+                        <li><i class="fas fa-check-circle"></i> Simple setup process</li>
+                        <li><i class="fas fa-check-circle"></i> Real-time management</li>
+                        <li><i class="fas fa-check-circle"></i> Beautiful giveaway embeds</li>
+                    </ul>
+                </div>
+                <div class="demo-video">
+                    <div class="video-wrapper">
+                        <div class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <img src="images/video-thumbnail.jpg" alt="Demo Video Thumbnail">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commands Section -->
+    <section class="commands" id="commands">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Complete Command List</h2>
+                <p class="section-subtitle">All the commands you need to manage your giveaways</p>
+            </div>
+            <div class="command-search">
+                <input type="text" id="commandSearch" placeholder="Search commands...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="command-categories" id="commandCategories">
+                <!-- Categories will be loaded via JavaScript -->
+            </div>
+            <div class="commands-container" id="commandsContainer">
+                <!-- Commands will be loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Section -->
+    <section class="premium" id="premium">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Premium Features</h2>
+                <p class="section-subtitle">Unlock the full potential of Giveaway Pro</p>
+            </div>
+            <div class="pricing-plans">
+                <div class="pricing-card basic">
+                    <div class="pricing-header">
+                        <h3>Basic</h3>
+                        <div class="price">Free</div>
+                        <p>For small communities</p>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Basic giveaway creation</li>
+                        <li><i class="fas fa-check"></i> Up to 3 concurrent giveaways</li>
+                        <li><i class="fas fa-check"></i> Standard requirements</li>
+                        <li><i class="fas fa-times"></i> No advanced analytics</li>
+                        <li><i class="fas fa-times"></i> No custom branding</li>
+                    </ul>
+                    <button class="btn btn-outline">Current Plan</button>
+                </div>
+                <div class="pricing-card pro">
+                    <div class="pricing-header">
+                        <h3>Pro</h3>
+                        <div class="price">$4.99<span>/month</span></div>
+                        <p>For growing communities</p>
+                        <div class="popular-badge">Most Popular</div>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> All Basic features</li>
+                        <li><i class="fas fa-check"></i> Up to 15 concurrent giveaways</li>
+                        <li><i class="fas fa-check"></i> Advanced requirements</li>
+                        <li><i class="fas fa-check"></i> Basic analytics</li>
+                        <li><i class="fas fa-check"></i> Custom branding</li>
+                    </ul>
+                    <button class="btn btn-primary">Upgrade Now</button>
+                </div>
+                <div class="pricing-card enterprise">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <div class="price">$9.99<span>/month</span></div>
+                        <p>For large communities</p>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> All Pro features</li>
+                        <li><i class="fas fa-check"></i> Unlimited giveaways</li>
+                        <li><i class="fas fa-check"></i> Advanced analytics</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                        <li><i class="fas fa-check"></i> Custom development</li>
+                    </ul>
+                    <button class="btn btn-primary">Upgrade Now</button>
+                </div>
+            </div>
+            <div class="premium-features">
+                <div class="premium-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Advanced Analytics</h3>
+                    <p>Track participation rates, engagement metrics, and winner statistics with beautiful dashboards.</p>
+                </div>
+                <div class="premium-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Custom Branding</h3>
+                    <p>Customize giveaway embeds with your server's colors, logo, and branding elements.</p>
+                </div>
+                <div class="premium-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Instant Notifications</h3>
+                    <p>Get real-time notifications for giveaway events and participant actions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Users Say</h2>
+                <p class="section-subtitle">Trusted by thousands of Discord communities</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <!-- Testimonials will be loaded via JavaScript -->
+                </div>
+                <div class="slider-nav">
+                    <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slider-dots" id="sliderDots"></div>
+                    <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Find answers to common questions about Giveaway Pro</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-column">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do I install the bot?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Installing Giveaway Pro is simple! Just click the "Invite to Server" button at the top of this page. You'll be redirected to Discord's authorization page where you can select the server you want to add the bot to and configure its permissions.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What permissions does the bot need?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Giveaway Pro requires the following permissions to function properly: View Channels, Send Messages, Embed Links, Add Reactions, and Manage Messages. These permissions are used to create and manage giveaways in your server. The invite link automatically selects the required permissions.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Is there a limit to giveaways?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>The free version allows up to 3 concurrent giveaways per server. Premium plans increase this limit to 15 (Pro) or unlimited (Enterprise). There's no limit on the total number of giveaways you can create over time.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-column">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How does the bot prevent cheating?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our advanced anti-cheat system checks for: account age, server join date, participation history, and other behavioral patterns. Premium plans include additional checks like email verification requirements and more sophisticated detection algorithms.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I transfer premium between servers?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Premium subscriptions are tied to your Discord account, not individual servers. You can manage which servers have premium features through our dashboard. You can transfer premium benefits between servers at any time.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do I get support?</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can join our support server through the link in the footer. Free users get community support, while premium users receive priority support with faster response times. For Enterprise customers, we offer dedicated support channels.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Giveaways?</h2>
+                <p>Join thousands of communities using Giveaway Pro to engage their members</p>
+                <div class="cta-buttons">
+                    <a href="https://discord.com/oauth2/authorize?client_id=YOUR_BOT_ID&permissions=8&scope=bot" class="btn btn-primary btn-large">
+                        <i class="fas fa-robot"></i> Add to Discord
+                    </a>
+                    <a href="#premium" class="btn btn-secondary btn-large">
+                        <i class="fas fa-crown"></i> Go Premium
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="Giveaway Pro Logo">
+                        <span>Giveaway Pro</span>
+                    </div>
+                    <p>The most advanced Discord giveaway bot with powerful features, analytics, and customization options.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#commands">Commands</a></li>
+                        <li><a href="#premium">Premium</a></li>
+                        <li><a href="#">Roadmap</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Giveaway Pro. All rights reserved. Not affiliated with Discord Inc.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/commands.js"></script>
+</body>
+</html>
